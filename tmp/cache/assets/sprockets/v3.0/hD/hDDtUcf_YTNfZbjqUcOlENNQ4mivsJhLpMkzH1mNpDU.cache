@@ -1,0 +1,12 @@
+I"Ò(function() {
+  $(function() {
+    return $('#pins').picturesLoaded(function() {
+      return $('#pins').masonry({
+        itemSelector: '.box',
+        isFitWidth: true
+      });
+    });
+  });
+
+}).call(this);
+:ET

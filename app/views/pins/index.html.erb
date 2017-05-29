@@ -56,10 +56,16 @@
             <% end %>
 </nav>
 
-<div class="container">
+  <div id="pins" class="transitions-enabled infinite-scroll clearfix">
+    <% @pins.each do |pin| %>
+      <div class="box panel panel-default col-md-4">
+        <%= image_tag pin.pictures.first.url %>
+          <div class="panel-body">
+             <h2> <%= link_to pin.title, pin %></h2>
+          </div>      
+          </div>
+      <% end %>
+  </div>
 
-<% @pins.each do |pin| %>
-    <%= image_tag pin.pictures.first.url %>
-<h2> <%= link_to pin.title, pin %></h2>
-<% end %>
-</div>
+
+

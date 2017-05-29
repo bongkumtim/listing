@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-
+gem 'masonry-rails', '~> 0.2.4'
 gem 'mini_magick', '~> 4.7'
 gem 'carrierwave', '~> 1.1'
 gem 'devise', '~> 4.3'

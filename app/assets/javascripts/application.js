@@ -11,8 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require masonry/jquery.masonry
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 //= require cable
@@ -23,3 +24,9 @@
 //= require jquery-2.1.1
 //= require modernizr
 //= require respond.min
+
+$ ->
+  $('#pins').picturesLoaded ->
+  	$('#pins').masonry
+  	  itemSelector: '.box'
+  	  isFitWidth: true
