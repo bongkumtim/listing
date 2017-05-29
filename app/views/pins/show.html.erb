@@ -55,7 +55,8 @@
                 </div> 
             <% end %>
 </nav>
-
+<div class="col-md-4"></div>
+<div class="col-md-4">
 <div class="container">
 <% @pin.pictures.each do |pic| %>
     <%= image_tag pic.url %>
@@ -63,8 +64,13 @@
 <h1> <%= @pin.title %> </h1>
 <p> <%= @pin.description %> </p>
 <p>Submitted by: <%= @pin.user.email %> </p>
-
+<%= link_to like_pin_path(@pin), method: :put, class: "btn btn-default" do %>
+  <i class="glyphicon glyphicon-heart"></i>
+    <%= @pin.get_upvotes.size %>
+<% end %>
+<br>
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_pin_path %>
 <%= link_to "Delete", pin_path, method: :delete, data: {confirm: 'Are you sure?'} %>
+</div>
 </div>

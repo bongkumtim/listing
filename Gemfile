@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'acts_as_votable', '~> 0.10.0'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'mini_magick', '~> 4.7'
 gem 'carrierwave', '~> 1.1'
