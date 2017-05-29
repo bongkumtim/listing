@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 ruby '2.4.0'
+gem 'simple_form', '~> 3.5'
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
