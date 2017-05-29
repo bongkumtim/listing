@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root 'homes#index'
+root 'pins#index'
 
 resources :pins
 end
